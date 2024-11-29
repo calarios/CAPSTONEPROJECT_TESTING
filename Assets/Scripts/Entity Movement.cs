@@ -22,11 +22,11 @@ public class EntityMovement : MonoBehaviour
     //GOOMBA ACTION WHEN ON VIEW
     private void OnBecameVisible()
     {
-#if UNITY_EDITOR
-        enabled = !EditorApplication.isPaused;
-#else
-        enabled = true;
-#endif
+        #if UNITY_EDITOR
+                enabled = !EditorApplication.isPaused;
+        #else
+                enabled = true;
+        #endif
     }
 
     // WHEN DESTROYED
